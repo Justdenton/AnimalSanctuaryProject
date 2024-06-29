@@ -28,16 +28,22 @@ public class Sanctuary {
 				System.out.println(animals[i].getName());
 			}
 		}
-	
 	}
 // The Sanctuary has an addAnimal method that takes an Animal parameter and places it in the first empty (null) slot in the array.	
 	// If there are no more empty slots, it outputs "Sorry, the sanctuary is full."
 	public void addAnimal(Animal animal) {
-		
+		for (int i = 0; i < animals.length; i++) {
+			if (animals[i] == null){
+				animals[i] = animal;
+				System.out.println(animal.getName() + " has been added.");
+				return;
+			}
+		}
+		System.out.println("Sorry, the sanctuary is full.");
 	}
 // Last, Sanctuary has a startAttendantRounds method which invokes its attendant's makeRounds.	
 	public void startAttendantRounds() {
-		
+		attendant.makeRounds(animals);
 	}
 	
 		
