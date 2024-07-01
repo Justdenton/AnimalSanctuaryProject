@@ -13,7 +13,7 @@ public class Attendant {
 // "For each" animal of animals that I check > and if that result isn't null, then I will feed them a random amount of food.		
 		for (Animal animal : animals) {
 			if (animal != null) {
-				System.out.println("I will feed " animal.getName() + " " + random.nextInt(10) + " foods.");
+				System.out.println("I will feed " + animal.getName() + " " + random.nextInt(10) + " foods.");
 				int foodAmt = random.nextInt(10) + 1;
 				animal.eat(foodAmt);
 			} else {
